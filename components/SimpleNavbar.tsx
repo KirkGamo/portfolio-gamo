@@ -154,12 +154,12 @@ export const SimpleNavbar = () => {
         ></div>
         
         {/* Mobile Menu Content */}
-        <div className={`absolute top-0 right-0 w-full max-w-sm h-full bg-white/98 dark:bg-gray-900/95 backdrop-blur-xl shadow-2xl border-l border-gray-200/50 dark:border-gray-700/50 transition-all duration-500 ${
+        <div className={`absolute top-0 right-0 w-full max-w-sm h-full bg-white dark:bg-gray-900/95 backdrop-blur-xl shadow-2xl border-l border-gray-300 dark:border-gray-700/50 transition-all duration-500 ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
           <div className="flex flex-col h-full">
             {/* Header */}
-            <div className="flex-shrink-0 p-4 border-b border-gray-200/50 dark:border-gray-700/50">
+            <div className="flex-shrink-0 p-4 border-b border-gray-300 dark:border-gray-700/50 bg-white dark:bg-transparent">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -167,14 +167,14 @@ export const SimpleNavbar = () => {
                   </div>
                   <div>
                     <div className="font-bold text-gray-900 dark:text-white">Navigation</div>
-                    <div className="text-xs text-gray-500 dark:text-gray-400">Quick access</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Quick access</div>
                   </div>
                 </div>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                 >
-                  <X className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+                  <X className="w-4 h-4 text-gray-700 dark:text-gray-400" />
                 </button>
               </div>
             </div>
@@ -188,14 +188,14 @@ export const SimpleNavbar = () => {
                   className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-[0.98] text-left ${
                     activeSection === item.id
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
-                      : 'text-gray-900 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50 border border-gray-200/50 dark:border-gray-700/50'
+                      : 'text-gray-800 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 border border-gray-300 dark:border-gray-700/50 bg-white/80 dark:bg-transparent'
                   }`}
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <div className={`p-2 rounded-lg transition-all duration-300 flex-shrink-0 ${
                     activeSection === item.id
                       ? 'bg-white/20 text-white'
-                      : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-400'
+                      : 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-400'
                   }`}>
                     {item.icon}
                   </div>
@@ -204,7 +204,7 @@ export const SimpleNavbar = () => {
                     <div className={`text-xs truncate ${
                       activeSection === item.id
                         ? 'text-white/70'
-                        : 'text-gray-600 dark:text-gray-500'
+                        : 'text-gray-700 dark:text-gray-500'
                     }`}>
                       {item.id === 'home' && 'Welcome section'}
                       {item.id === 'about' && 'Personal introduction'}
@@ -223,8 +223,8 @@ export const SimpleNavbar = () => {
             </div>
 
             {/* Footer */}
-            <div className="flex-shrink-0 p-4 border-t border-gray-200/50 dark:border-gray-700/50">
-              <div className="p-3 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-300/50 dark:border-blue-700/50">
+            <div className="flex-shrink-0 p-4 border-t border-gray-300 dark:border-gray-700/50 bg-white dark:bg-transparent">
+              <div className="p-3 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-700/50">
                 <div className="text-sm font-medium text-gray-900 dark:text-white mb-1 truncate">
                   Currently viewing: {navItems.find(item => item.id === activeSection)?.label}
                 </div>
