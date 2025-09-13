@@ -9,6 +9,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Kirk Henrich C. Gamo - Software Engineer',
   description: 'Portfolio website of Kirk Henrich C. Gamo, a passionate Software Engineer specializing in AI and web development.',
+  icons: {
+    icon: '/icon',
+    apple: '/apple-icon',
+  },
 }
 
 export default function RootLayout({
