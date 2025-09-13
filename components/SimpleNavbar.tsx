@@ -1,14 +1,7 @@
 'use client'
 
-import React, { useState, useEffect } from 'reac      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
-      } ${
-        isScrolled 
-          ? 'bg-white/95 dark:bg-gray-900/90 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-lg shadow-gray-500/10 dark:shadow-black/20' 
-          : 'bg-white/80 dark:bg-transparent backdrop-blur-sm'
-      }`}>
-        {/* Background gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-amber-500/10 dark:from-blue-500/5 dark:via-purple-500/5 dark:to-amber-500/5 pointer-events-none"></div>t { Menu, X, Home, User, GraduationCap, Briefcase, Users, Code, Trophy, ChevronDown, Sparkles } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import { Menu, X, Home, User, GraduationCap, Briefcase, Users, Code, Trophy, ChevronDown, Sparkles } from 'lucide-react'
 
 export const SimpleNavbar = () => {
   const [activeSection, setActiveSection] = useState('home')
@@ -69,15 +62,15 @@ export const SimpleNavbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       } ${
         isScrolled 
-          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-lg shadow-gray-500/10 dark:shadow-black/20' 
-          : 'bg-transparent'
+          ? 'bg-white/95 dark:bg-gray-900/90 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-lg shadow-gray-500/10 dark:shadow-black/20' 
+          : 'bg-white/80 dark:bg-transparent backdrop-blur-sm'
       }`}>
         {/* Background gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-amber-500/5 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-amber-500/10 dark:from-blue-500/5 dark:via-purple-500/5 dark:to-amber-500/5 pointer-events-none"></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex justify-between items-center py-4">
