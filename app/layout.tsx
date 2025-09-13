@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} bg-background text-foreground transition-colors duration-300`}>
         <SimpleNavbar />
         <main>{children}</main>
         <SimpleFooter />

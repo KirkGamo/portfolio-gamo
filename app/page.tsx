@@ -26,19 +26,19 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-950/20 via-purple-950/20 to-emerald-950/20 pt-24">
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-emerald-50 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-emerald-950/20 pt-24">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 dark:from-blue-500/10 dark:to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-green-500/20 to-teal-500/20 dark:from-green-500/10 dark:to-teal-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 dark:from-purple-500/5 dark:to-pink-500/5 rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 xl:gap-24 items-center min-h-[75vh]">
             {/* Left Side - Profile Picture */}
             <div className="flex justify-center lg:justify-end order-1 lg:order-1 mt-8">
               <div className="relative">
-                <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl shadow-purple-500/20 bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm">
+                <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-gray-200/50 dark:border-white/20 shadow-2xl shadow-purple-500/20 bg-gradient-to-br from-blue-500/20 to-purple-500/20 dark:from-blue-500/10 dark:to-purple-500/10 backdrop-blur-sm">
                   <ProfileImage
                     src="/profile-picture.png"
                     alt="Kirk Henrich C. Gamo"
@@ -65,17 +65,17 @@ export default function Home() {
             <div className="text-center lg:text-left space-y-8 order-2 lg:order-2 px-4 lg:px-0">
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <p className="text-xl text-white/60 font-light">Hello, I'm</p>
+                  <p className="text-xl text-gray-600 dark:text-white/60 font-light">Hello, I'm</p>
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                    <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-gray-900 via-blue-600 to-purple-600 dark:from-white dark:via-blue-200 dark:to-purple-200 bg-clip-text text-transparent">
                       Kirk Henrich C. Gamo
                     </span>
                   </h1>
                 </div>
                 
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-light min-h-[3rem] text-white/80">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-light min-h-[3rem] text-gray-700 dark:text-white/80">
                   I'm a{' '}
-                  <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent font-semibold">
+                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 dark:from-blue-400 dark:via-purple-400 dark:to-emerald-400 bg-clip-text text-transparent font-semibold">
                     <TypingCarousel
                       texts={[
                         "Computer Science Student",
@@ -94,7 +94,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <p className="text-lg text-white/70 max-w-2xl leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-white/70 max-w-2xl leading-relaxed">
                 Passionate Computer Science student from Capiz, Philippines, specializing in AI and web development. 
                 Currently pursuing excellence at West Visayas State University while leading innovative projects and building solutions that make a difference.
               </p>
@@ -118,7 +118,7 @@ export default function Home() {
                     href="https://www.linkedin.com/in/kirkgamo/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 bg-white/10 backdrop-blur-sm text-white rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 hover:scale-110 border border-white/20 hover:border-blue-400"
+                    className="p-4 bg-white/20 dark:bg-white/10 backdrop-blur-sm text-gray-600 dark:text-white rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 hover:scale-110 border border-gray-300/50 dark:border-white/20 hover:border-blue-400"
                     aria-label="LinkedIn"
                   >
                     <Linkedin size={20} />
@@ -128,7 +128,7 @@ export default function Home() {
                     href="https://www.facebook.com/kirthenrich.gamo"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 bg-white/10 backdrop-blur-sm text-white rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110 border border-white/20 hover:border-blue-400"
+                    className="p-4 bg-white/20 dark:bg-white/10 backdrop-blur-sm text-gray-600 dark:text-white rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110 border border-gray-300/50 dark:border-white/20 hover:border-blue-400"
                     aria-label="Facebook"
                   >
                     <Facebook size={20} />
@@ -138,7 +138,7 @@ export default function Home() {
                     href="https://www.instagram.com/korkkkk1/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 bg-white/10 backdrop-blur-sm text-white rounded-full hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 hover:text-white transition-all duration-300 hover:scale-110 border border-white/20 hover:border-pink-400"
+                    className="p-4 bg-white/20 dark:bg-white/10 backdrop-blur-sm text-gray-600 dark:text-white rounded-full hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 hover:text-white transition-all duration-300 hover:scale-110 border border-gray-300/50 dark:border-white/20 hover:border-pink-400"
                     aria-label="Instagram"
                   >
                     <Instagram size={20} />
@@ -148,7 +148,7 @@ export default function Home() {
                     href="https://x.com/KXAZTHRA1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 bg-white/10 backdrop-blur-sm text-white rounded-full hover:bg-slate-900 hover:text-white transition-all duration-300 hover:scale-110 border border-white/20 hover:border-slate-700"
+                    className="p-4 bg-white/20 dark:bg-white/10 backdrop-blur-sm text-gray-600 dark:text-white rounded-full hover:bg-slate-900 hover:text-white transition-all duration-300 hover:scale-110 border border-gray-300/50 dark:border-white/20 hover:border-slate-700"
                     aria-label="X (formerly Twitter)"
                   >
                     <XIcon size={20} />

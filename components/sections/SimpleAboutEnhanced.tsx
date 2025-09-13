@@ -27,18 +27,18 @@ export const SimpleAboutEnhanced = () => {
           </p>
           
           {/* Quick Stats */}
-          <div className="flex justify-center gap-8 mb-8 text-sm">
-            <div className="text-center">
-              <div className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">CS Student</div>
-              <div className="text-gray-500 dark:text-gray-400">Major</div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
+            <div className="text-center p-4 bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm rounded-xl border border-purple-200/50 dark:border-purple-700/50">
+              <div className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent mb-1">CS Student</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400 font-medium">Major</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-emerald-500 bg-clip-text text-transparent">AI Focus</div>
-              <div className="text-gray-500 dark:text-gray-400">Specialization</div>
+            <div className="text-center p-4 bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm rounded-xl border border-blue-200/50 dark:border-blue-700/50">
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-emerald-500 bg-clip-text text-transparent mb-1">AI Focus</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400 font-medium">Specialization</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">2027</div>
-              <div className="text-gray-500 dark:text-gray-400">Graduation</div>
+            <div className="text-center p-4 bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm rounded-xl border border-emerald-200/50 dark:border-emerald-700/50">
+              <div className="text-2xl font-bold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-1">2027</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400 font-medium">Graduation</div>
             </div>
           </div>
         </div>

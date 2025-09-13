@@ -1,7 +1,14 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import { Menu, X, Home, User, GraduationCap, Briefcase, Users, Code, Trophy, ChevronDown, Sparkles } from 'lucide-react'
+import React, { useState, useEffect } from 'reac      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      } ${
+        isScrolled 
+          ? 'bg-white/95 dark:bg-gray-900/90 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-700/50 shadow-lg shadow-gray-500/10 dark:shadow-black/20' 
+          : 'bg-white/80 dark:bg-transparent backdrop-blur-sm'
+      }`}>
+        {/* Background gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-amber-500/10 dark:from-blue-500/5 dark:via-purple-500/5 dark:to-amber-500/5 pointer-events-none"></div>t { Menu, X, Home, User, GraduationCap, Briefcase, Users, Code, Trophy, ChevronDown, Sparkles } from 'lucide-react'
 
 export const SimpleNavbar = () => {
   const [activeSection, setActiveSection] = useState('home')
@@ -125,7 +132,7 @@ export const SimpleNavbar = () => {
             <div className="lg:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="relative p-3 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="relative p-3 bg-white/80 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl border border-gray-300/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 aria-label="Toggle mobile menu"
               >
                 <div className={`transition-all duration-300 ${isMobileMenuOpen ? 'rotate-180' : ''}`}>
@@ -154,7 +161,7 @@ export const SimpleNavbar = () => {
         ></div>
         
         {/* Mobile Menu Content */}
-        <div className={`absolute top-0 right-0 w-full max-w-sm h-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-2xl transition-all duration-500 ${
+        <div className={`absolute top-0 right-0 w-full max-w-sm h-full bg-white/98 dark:bg-gray-900/95 backdrop-blur-xl shadow-2xl border-l border-gray-200/50 dark:border-gray-700/50 transition-all duration-500 ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
           <div className="flex flex-col h-full">
