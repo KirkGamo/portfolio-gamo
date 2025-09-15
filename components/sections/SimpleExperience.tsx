@@ -6,7 +6,7 @@ export const SimpleExperience = () => {
     {
       title: "Web Developer",
       company: "WVSU - SparkHub & Cyb:Org",
-      location: "West Visayas State University - Lapaz, Iloilo",
+      location: "WVSU - Lapaz, Iloilo",
       period: "January 2024 - Present",
       duration: "9 months",
       type: "Current Position",

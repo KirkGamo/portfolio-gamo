@@ -28,24 +28,39 @@ export const SimpleNavbar = () => {
       
       // Keep navbar always visible
       setIsVisible(true)
-
-      // Update active section
-      const sections = navItems.map(item => document.getElementById(item.id))
-      const scrollPosition = currentScrollY + 120 // Offset for fixed navbar
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i]
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navItems[i].id)
-          break
-        }
-      }
     }
+
+    // Set up Intersection Observer for better section detection
+    const observerOptions = {
+      rootMargin: '-100px 0px -60% 0px',
+      threshold: 0
+    }
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions)
+
+    // Observe all sections
+    navItems.forEach(item => {
+      const element = document.getElementById(item.id)
+      if (element) {
+        observer.observe(element)
+      }
+    })
 
     window.addEventListener('scroll', handleScroll, { passive: true })
     handleScroll() // Check initial position
 
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      observer.disconnect()
+    }
   }, [])
 
   const scrollToSection = (sectionId: string) => {
@@ -173,6 +188,7 @@ export const SimpleNavbar = () => {
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  aria-label="Close mobile menu"
                 >
                   <X className="w-4 h-4 text-gray-700 dark:text-gray-400" />
                 </button>
@@ -190,7 +206,6 @@ export const SimpleNavbar = () => {
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
                       : 'text-gray-800 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 border border-gray-300 dark:border-gray-700/50 bg-white/80 dark:bg-transparent'
                   }`}
-                  style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <div className={`p-2 rounded-lg transition-all duration-300 flex-shrink-0 ${
                     activeSection === item.id

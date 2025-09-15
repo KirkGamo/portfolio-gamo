@@ -27,7 +27,7 @@ export const SimpleAboutEnhanced = () => {
           </p>
           
           {/* Quick Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-8">
             <div className="text-center p-4 bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm rounded-xl border border-purple-200/50 dark:border-purple-700/50">
               <div className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent mb-1">CS Student</div>
               <div className="text-sm text-gray-500 dark:text-gray-400 font-medium">Major</div>
@@ -35,10 +35,6 @@ export const SimpleAboutEnhanced = () => {
             <div className="text-center p-4 bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm rounded-xl border border-blue-200/50 dark:border-blue-700/50">
               <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-emerald-500 bg-clip-text text-transparent mb-1">AI Focus</div>
               <div className="text-sm text-gray-500 dark:text-gray-400 font-medium">Specialization</div>
-            </div>
-            <div className="text-center p-4 bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm rounded-xl border border-emerald-200/50 dark:border-emerald-700/50">
-              <div className="text-2xl font-bold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-1">2027</div>
-              <div className="text-sm text-gray-500 dark:text-gray-400 font-medium">Graduation</div>
             </div>
           </div>
         </div>
@@ -58,7 +54,7 @@ export const SimpleAboutEnhanced = () => {
                   I'm Kirk Henrich C. Gamo, a passionate <strong className="text-blue-600 dark:text-blue-400">Computer Science Student</strong> and 
                   <strong className="text-purple-600 dark:text-purple-400"> AI Enthusiast</strong> from Iloilo City, Philippines. 
                   I am currently pursuing my Bachelor of Science in Computer Science at West Visayas State University, 
-                  majoring in Artificial Intelligence, with an expected graduation in <strong className="text-emerald-600 dark:text-emerald-400">2027</strong>.
+                  majoring in Artificial Intelligence.
                 </p>
                 
                 <p>
@@ -116,8 +112,8 @@ export const SimpleAboutEnhanced = () => {
                     <Calendar className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 dark:text-white">Expected Graduation: 2027</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">Academic Timeline</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">Currently Enrolled</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Academic Status</div>
                   </div>
                 </div>
               </div>
@@ -166,66 +162,37 @@ export const SimpleAboutEnhanced = () => {
             </div>
           </div>
 
-          {/* Academic Performance & Goals */}
+          {/* Future Goals */}
 
           <div className="bg-gradient-to-r from-white/60 to-gray-50/60 dark:from-gray-800/60 dark:to-gray-900/60 rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Academic Excellence & Future Goals</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Future Goals & Vision</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Committed to academic achievement while building practical skills and gaining real-world experience
+                Building towards a career in AI and technology with meaningful impact
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* GWA Card */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Career Goals Card */}
               <div className="group bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 p-6 rounded-2xl hover:from-blue-500/20 hover:to-cyan-500/20 hover:border-blue-500/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
-                    <Award className="w-6 h-6 text-white" />
+                    <Target className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-right">
-                    <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                      1.14
-                    </div>
-                    <div className="text-sm text-blue-600 dark:text-blue-400 font-medium">out of 5.0</div>
-                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Career Aspirations</h4>
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Cumulative GWA</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Maintaining excellent academic performance throughout university studies</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Pursuing opportunities in AI research, machine learning engineering, and innovative technology solutions that can make a positive impact on society.</p>
               </div>
 
-              {/* Graduation Card */}
-              <div className="group bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 p-6 rounded-2xl hover:from-emerald-500/20 hover:to-teal-500/20 hover:border-emerald-500/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
-                    <GraduationCap className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-right">
-                    <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                      2027
-                    </div>
-                    <div className="text-sm text-emerald-600 dark:text-emerald-400 font-medium">Expected</div>
-                  </div>
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Graduation Year</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Completing BS Computer Science with AI specialization</p>
-              </div>
-
-              {/* Specialization Card */}
+              {/* Skills Development Card */}
               <div className="group bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 p-6 rounded-2xl hover:from-purple-500/20 hover:to-pink-500/20 hover:border-purple-500/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
                     <Brain className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                      AI
-                    </div>
-                    <div className="text-sm text-purple-600 dark:text-purple-400 font-medium">Focus</div>
-                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Continuous Growth</h4>
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Specialization</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Artificial Intelligence and Machine Learning technologies</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Committed to staying at the forefront of AI and web development technologies through continuous learning and hands-on project experience.</p>
               </div>
             </div>
 

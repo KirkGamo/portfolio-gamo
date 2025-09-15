@@ -33,7 +33,7 @@ export const SimpleAwards = () => {
       icon: <Medal className="w-6 h-6" />,
       description: "Recognized for outstanding academic performance with highest distinction in Computer Science program",
       skills: ["Computer Science", "Academic Excellence", "Research", "Leadership"],
-      organizer: "West Visayas State University",
+      organizer: "WVSU",
       impact: "GPA: 3.9/4.0 - Top 5% of class",
       color: "from-blue-400 to-cyan-500",
       bgColor: "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20"
@@ -49,7 +49,7 @@ export const SimpleAwards = () => {
       icon: <Medal className="w-6 h-6" />,
       description: "Consecutive gold award recognition for exceptional academic achievements and consistent performance",
       skills: ["Computer Science", "Programming", "Mathematics", "Problem Solving"],
-      organizer: "West Visayas State University",
+      organizer: "WVSU",
       impact: "Maintained top academic standing",
       color: "from-blue-400 to-indigo-500",
       bgColor: "from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20"

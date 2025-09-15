@@ -32,6 +32,7 @@ module.exports = {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'slide-in': 'slideIn 0.5s ease-out',
+        'spin-slow': 'spin 3s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -50,4 +51,18 @@ module.exports = {
     },
   },
   plugins: [],
+  // Performance optimizations
+  corePlugins: {
+    // Disable unused Tailwind features
+    preflight: true,
+  },
+  // Modern safelist configuration
+  safelist: [
+    // Keep dynamic classes that might be needed
+    'animate-spin',
+    'animate-pulse',
+    'animate-bounce',
+    { pattern: /^bg-gradient-(to|from)-(r|l|t|b|tr|tl|br|bl)$/ },
+    { pattern: /^(from|to|via)-(blue|purple|green|red|yellow|pink|indigo|cyan|emerald|orange)-(400|500|600)$/ },
+  ],
 }

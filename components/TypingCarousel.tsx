@@ -21,9 +21,27 @@ export const TypingCarousel: React.FC<TypingCarouselProps> = ({
   const [currentText, setCurrentText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
+  const [isInitialized, setIsInitialized] = useState(false)
+  const [isTransitioning, setIsTransitioning] = useState(false)
+
+  // Initialize the component
+  useEffect(() => {
+    if (!texts || texts.length === 0) return
+    if (!isInitialized) {
+      setIsInitialized(true)
+      // Small delay to ensure smooth start
+      setTimeout(() => {
+        setCurrentText('')
+        setCurrentTextIndex(0)
+      }, 100)
+    }
+  }, [texts, isInitialized])
 
   useEffect(() => {
-    const targetText = texts[currentTextIndex]
+    // Safety check for texts array
+    if (!texts || texts.length === 0 || !isInitialized) return
+
+    const targetText = texts[currentTextIndex] || ''
 
     if (isPaused) {
       const pauseTimeout = setTimeout(() => {
@@ -33,13 +51,25 @@ export const TypingCarousel: React.FC<TypingCarouselProps> = ({
       return () => clearTimeout(pauseTimeout)
     }
 
+    if (isTransitioning) {
+      const transitionTimeout = setTimeout(() => {
+        setIsTransitioning(false)
+      }, 200) // Small delay between deletion and next word
+      return () => clearTimeout(transitionTimeout)
+    }
+
     const timeout = setTimeout(() => {
       if (isDeleting) {
         if (currentText.length > 0) {
-          setCurrentText(currentText.slice(0, -1))
+          setCurrentText(prev => prev.slice(0, -1))
         } else {
+          // Finished deleting, prepare to move to next text
           setIsDeleting(false)
-          setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length)
+          setIsTransitioning(true)
+          // Move to next text index after a small delay
+          setTimeout(() => {
+            setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length)
+          }, 100)
         }
       } else {
         if (currentText.length < targetText.length) {
@@ -51,12 +81,25 @@ export const TypingCarousel: React.FC<TypingCarouselProps> = ({
     }, isDeleting ? deletingSpeed : typingSpeed)
 
     return () => clearTimeout(timeout)
-  }, [currentText, isDeleting, isPaused, currentTextIndex, texts, typingSpeed, deletingSpeed, pauseDuration])
+  }, [currentText, isDeleting, isPaused, currentTextIndex, texts, typingSpeed, deletingSpeed, pauseDuration, isInitialized, isTransitioning])
+
+  const displayText = () => {
+    if (!isInitialized) {
+      return texts && texts.length > 0 ? '' : 'Loading...'
+    }
+    
+    // During transition, keep text empty
+    if (isTransitioning) {
+      return ''
+    }
+    
+    return currentText
+  }
 
   return (
     <span className={className}>
-      {currentText}
-      <span className="animate-pulse">|</span>
+      {displayText()}
+      <span className="animate-pulse text-blue-500">|</span>
     </span>
   )
 }

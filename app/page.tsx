@@ -15,12 +15,32 @@ const XIcon = ({ size = 20, className = "" }) => (
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
   </svg>
 )
-import { SimpleAboutEnhanced } from '../components/sections/SimpleAboutEnhanced'
-import { SimpleEducation } from '../components/sections/SimpleEducation'
-import { SimpleExperience } from '../components/sections/SimpleExperience'
-import { SimpleLeadership } from '../components/sections/SimpleLeadership'
-import { SimpleSkills } from '../components/sections/SimpleSkills'
-import { SimpleAwards } from '../components/sections/SimpleAwards'
+import dynamic from 'next/dynamic'
+
+// Lazy load sections for better performance
+const SimpleAboutEnhanced = dynamic(() => import('../components/sections/SimpleAboutEnhanced').then(mod => ({ default: mod.SimpleAboutEnhanced })), {
+  loading: () => <div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div></div>
+})
+
+const SimpleEducation = dynamic(() => import('../components/sections/SimpleEducation').then(mod => ({ default: mod.SimpleEducation })), {
+  loading: () => <div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div></div>
+})
+
+const SimpleExperience = dynamic(() => import('../components/sections/SimpleExperience').then(mod => ({ default: mod.SimpleExperience })), {
+  loading: () => <div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-500"></div></div>
+})
+
+const SimpleLeadership = dynamic(() => import('../components/sections/SimpleLeadership').then(mod => ({ default: mod.SimpleLeadership })), {
+  loading: () => <div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-500"></div></div>
+})
+
+const SimpleSkills = dynamic(() => import('../components/sections/SimpleSkills').then(mod => ({ default: mod.SimpleSkills })), {
+  loading: () => <div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div></div>
+})
+
+const SimpleAwards = dynamic(() => import('../components/sections/SimpleAwards').then(mod => ({ default: mod.SimpleAwards })), {
+  loading: () => <div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-pink-500"></div></div>
+})
 
 export default function Home() {
   return (

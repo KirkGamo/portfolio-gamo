@@ -7,7 +7,7 @@ export const SimpleLeadership = () => {
       organization: "WVSU - SparkHub",
       position: "Chief Executive Officer",
       period: "June 2025 - Present",
-      location: "West Visayas State University - Lapaz, Iloilo",
+      location: "WVSU - Lapaz, Iloilo",
       achievements: [
         "Coordinated the execution of the first-ever ExeCom Sensitivity Training",
         "Partnered with Sakdag PH for outreach activities",
@@ -23,7 +23,7 @@ export const SimpleLeadership = () => {
       organization: "WVSU - SparkHub",
       position: "Chief Research and Development Officer",
       period: "August 2024 - June 2025",
-      location: "West Visayas State University - Lapaz, Iloilo",
+      location: "WVSU - Lapaz, Iloilo",
       achievements: [
         "Managed and led the development of the College Fundays Realtime Digital Point System Tracker (ReDiPoST) - a web-based platform to manage and display live sporting event results during campus competitions",
         "Mentored 1 team during SPARKrientation and Acquiantance Party",
@@ -39,7 +39,7 @@ export const SimpleLeadership = () => {
       organization: "WVSU - SparkHub",
       position: "Research and Development Committee Member",
       period: "November 2023 - August 2024",
-      location: "West Visayas State University - Lapaz, Iloilo",
+      location: "WVSU - Lapaz, Iloilo",
       achievements: [
         "Facilitated 2 events (GameOn 2023, and BuzzEx 2024)"
       ],
@@ -53,7 +53,7 @@ export const SimpleLeadership = () => {
       organization: "WVSU - CIPHER",
       position: "Vice Chairperson for Internal Affairs",
       period: "July 2024 - July 2025",
-      location: "West Visayas State University - Lapaz, Iloilo",
+      location: "WVSU - Lapaz, Iloilo",
       achievements: [
         "Co-founded the establishment of the organization",
         "Co-authored the Constitution and By-Laws"
@@ -68,7 +68,7 @@ export const SimpleLeadership = () => {
       organization: "WVSU - Association of DOST Scholars",
       position: "Board Member",
       period: "August 2024 - August 2025",
-      location: "West Visayas State University - Lapaz, Iloilo",
+      location: "WVSU - Lapaz, Iloilo",
       achievements: [
         "Handled the tracking of finance expenses of the whole organization throughout the academic year"
       ],
@@ -82,7 +82,7 @@ export const SimpleLeadership = () => {
       organization: "WVSU - Cyb:Org",
       position: "Logistics Procurement Board Member",
       period: "August 2024 - July 2025",
-      location: "West Visayas State University - Lapaz, Iloilo",
+      location: "WVSU - Lapaz, Iloilo",
       achievements: [
         "Taught local community youths about AI and its implications during SK-na All"
       ],
@@ -96,7 +96,7 @@ export const SimpleLeadership = () => {
       organization: "WVSU - Cyb:Org",
       position: "Logistics Procurement Committee Member",
       period: "September 2023 - July 2024",
-      location: "West Visayas State University - Lapaz, Iloilo",
+      location: "WVSU - Lapaz, Iloilo",
       achievements: [
         "Facilitated the Korean delegates during the Jeju National University Internship Program"
       ],
@@ -110,7 +110,7 @@ export const SimpleLeadership = () => {
       organization: "WVSU - BSCS A Batch 2027",
       position: "Class Assistant Secretary",
       period: "August 2024 - Present",
-      location: "West Visayas State University - Lapaz, Iloilo",
+      location: "WVSU - Lapaz, Iloilo",
       achievements: [
         "Currently serving as Assistant Secretary for Batch 2027"
       ],
@@ -124,7 +124,7 @@ export const SimpleLeadership = () => {
       organization: "WVSU - BSCS A Batch 2027",
       position: "Class Chairperson",
       period: "August 2023 - August 2024",
-      location: "West Visayas State University - Lapaz, Iloilo",
+      location: "WVSU - Lapaz, Iloilo",
       achievements: [
         "Handled an average of 2 class projects for University-wide events (National Statistics Month Infographics Contest 2023 - 2nd place, and Heath and Fitness Day Advocacy 2023 - 3rd place)",
         "Headed the creation of the program-wide uniform shirts in collaboration with the program seniors and other section"
@@ -139,7 +139,7 @@ export const SimpleLeadership = () => {
       organization: "WVSU - University Students' Alliance (USA)",
       position: "Auditor at the College of ICT Department",
       period: "August 2023 - July 2024",
-      location: "West Visayas State University - Lapaz, Iloilo",
+      location: "WVSU - Lapaz, Iloilo",
       achievements: [
         "Spearheaded the awareness project - DIGIcation: A Digital Literacy Awareness Seminar, to far-flung communities around Iloilo City",
         "Volunteered at an average of 5 community outreached projects within Iloilo City (Zarraga Childrens Village Charity, Villa Clean-up Drive, Voters' Awareness Seminar, and such)"
@@ -154,7 +154,7 @@ export const SimpleLeadership = () => {
       organization: "WVSU - College of Information and Communication Technology (CICT)",
       position: "Auditor at the 1st Year Curriculum",
       period: "September 2023 - August 2024",
-      location: "West Visayas State University - Lapaz, Iloilo",
+      location: "WVSU - Lapaz, Iloilo",
       achievements: [
         "Facilitated the 1st year students participation in sports during the CICT Fundays 2023"
       ],
