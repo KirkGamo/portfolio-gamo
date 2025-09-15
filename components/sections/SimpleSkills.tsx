@@ -339,50 +339,55 @@ export const SimpleSkills = () => {
             <Users className="w-6 h-6" />
             Soft Skills & Leadership
           </h3>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
               {softSkills.map((skill, index) => (
                 <div
                   key={index}
-                  className="group relative"
+                  className="group relative h-full"
                   onMouseEnter={() => setHoveredSkill(skill.name)}
                   onMouseLeave={() => setHoveredSkill(null)}
                 >
-                  <div className={`relative bg-gradient-to-br ${skill.color} backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl p-6 text-center hover:shadow-xl hover:shadow-gray-500/10 dark:hover:shadow-black/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden`}>
+                  <div className={`relative bg-gradient-to-br ${skill.color} backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-xl p-6 text-center hover:shadow-xl hover:shadow-gray-500/10 dark:hover:shadow-black/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden h-full flex flex-col`}>
                     {/* Skill Icon */}
-                    <div className="mb-4">
+                    <div className="mb-4 flex-shrink-0">
                       <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 dark:bg-black/20 text-2xl group-hover:scale-110 transition-transform duration-300">
                         {skill.icon}
                       </div>
                     </div>
 
                     {/* Skill Name */}
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                    <h4 className="font-semibold text-lg text-gray-900 dark:text-white mb-3 flex-shrink-0">
                       {skill.name}
                     </h4>
 
-                    {/* Skill Description */}
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                      {skill.description}
-                    </p>
-
-                    {/* Proficiency Level */}
-                    <div className="flex items-center justify-center gap-1 mb-3">
-                      {[...Array(5)].map((_, starIndex) => (
-                        <Star
-                          key={starIndex}
-                          className={`w-4 h-4 ${
-                            starIndex < skill.level
-                              ? 'text-yellow-400 fill-current'
-                              : 'text-gray-300 dark:text-gray-600'
-                          } transition-colors duration-200`}
-                        />
-                      ))}
+                    {/* Skill Description - with fixed height */}
+                    <div className="flex-grow flex items-center mb-4">
+                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                        {skill.description}
+                      </p>
                     </div>
 
-                    {/* Experience Badge */}
-                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/30 dark:bg-black/30 text-xs font-medium text-gray-700 dark:text-gray-300">
-                      {skill.experience}
+                    {/* Bottom Section - Fixed height */}
+                    <div className="flex-shrink-0 space-y-3">
+                      {/* Proficiency Level */}
+                      <div className="flex items-center justify-center gap-1">
+                        {[...Array(5)].map((_, starIndex) => (
+                          <Star
+                            key={starIndex}
+                            className={`w-4 h-4 ${
+                              starIndex < skill.level
+                                ? 'text-yellow-400 fill-current'
+                                : 'text-gray-300 dark:text-gray-600'
+                            } transition-colors duration-200`}
+                          />
+                        ))}
+                      </div>
+
+                      {/* Experience Badge */}
+                      <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/30 dark:bg-black/30 text-xs font-medium text-gray-700 dark:text-gray-300">
+                        {skill.experience}
+                      </div>
                     </div>
 
                     {/* Hover Effect Overlay */}
